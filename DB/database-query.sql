@@ -57,3 +57,11 @@ CREATE TABLE asistencia(
 	fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	status BOOLEAN 
 );
+
+
+ALTER TABLE asistencia ADD COLUMN observacion TEXT;
+
+ALTER TABLE asistencia 
+ADD COLUMN asignacion_id INT REFERENCES asignacion(idAsignacion); 
+
+SELECT * FROM asistencia;
